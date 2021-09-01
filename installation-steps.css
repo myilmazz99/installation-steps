@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.5px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+header {
+  width: 100%;
+  padding: 28px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.scrolled header {
+  background-color: #111;
+}
+
+header .logo {
+  max-width: 180px;
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(assets/banner-bg.png);
+}
+
+.hero__inner {
+  position: relative;
+}
+
+.hero__inner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.98);
+  z-index: -1;
+}
+
+.hero__inner .container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  padding-bottom: 60px;
+  padding-top: 100px;
+}
+
+.hero__text {
+  margin-right: 24px;
+}
+
+.hero__text h1 {
+  font-weight: 500;
+}
+
+.hero__text h1 span {
+  color: #87ba4b;
+  display: block;
+  margin-top: 14px;
+}
+
+.hero__text h1 {
+  font-size: 44px;
+}
+
+.hero__text p {
+  margin: 20px 0;
+}
+
+.hero__text button {
+  color: #fff;
+  margin-top: 14px;
+  height: 80px;
+  width: 220px;
+  border-radius: 11px;
+  background-color: #222;
+  border: none;
+  margin-right: 16px;
+  cursor: pointer;
+  display: flex;
+  padding-left: 40px;
+  align-items: center;
+}
+
+.hero__text button i {
+  font-size: 40px;
+  margin-right: 14px;
+}
+
+.hero__text button span {
+  display: block;
+  font-size: 16px;
+}
+
+.hero__text button span:last-child {
+  margin-top: 8px;
+}
+
+.hero__text button:hover {
+  background-color: #87ba4b;
+  color: #000000;
+}
+
+.hero__banner img {
+  width: 100%;
+}
+
+.hero__actions {
+  display: flex;
+}
+
+.hero .logo {
+  max-width: 200px;
+}
+
+.video-tutorial {
+  height: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(assets/video-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.video-tutorial::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #87ba4b;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+}
+
+.video-tutorial::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(assets/video-img.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 1171px;
+  width: 100%;
+  height: 190px;
+}
+
+.video-tutorial__inner {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+.video-tutorial__inner i {
+  font-size: 100px;
+}
+
+.video-tutorial__inner .title {
+  font-size: 44px;
+  margin-top: 20px;
+}
+
+.video-tutorial__inner mat-icon {
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width: 992px) {
+  .hero__inner .container {
+    flex-wrap: wrap;
+  }
+
+  .hero__banner {
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+
+.steps-container {
+  padding: 120px 0 90px 0;
+  text-align: center;
+  background-color: #000;
+}
+
+.steps-container h2 {
+  padding: 20px 0;
+  color: #fff;
+  font-size: 36px;
+}
+
+.header-divider {
+  border: none;
+  height: 3px;
+  width: 50px;
+  margin: 0 auto;
+  background-color: #87ba4b;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  column-gap: 70px;
+  row-gap: 50px;
+  margin-top: 80px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 14px;
+}
+
+.step h3 {
+  color: #87ba4b;
+}
+
+.step figure {
+  margin: 28px 0;
+}
+
+.step p {
+  color: #fff;
+  font-size: 15px;
+}
+
+.step img {
+  display: block;
+  width: 100%;
+  max-height: 450px;
+}
+
+footer {
+  background-image: url(assets/bg-img.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  color: #999999;
+}
+
+#scroll-top {
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: #87ba4b;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  cursor: pointer;
+}
+
+.scrolled #scroll-top {
+  display: flex;
+}
