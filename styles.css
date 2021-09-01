@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 ul {
@@ -118,19 +119,20 @@ header .logo {
   color: #fff;
   margin-top: 14px;
   height: 80px;
-  width: 220px;
+  max-width: 220px;
+  width: 100%;
   border-radius: 11px;
   background-color: #222;
   border: none;
   margin-right: 16px;
   cursor: pointer;
   display: flex;
-  padding-left: 40px;
+  justify-content: center;
   align-items: center;
 }
 
 .hero__text button i {
-  font-size: 40px;
+  font-size: 36px;
   margin-right: 14px;
 }
 
@@ -302,8 +304,8 @@ footer {
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 60px;
-  right: 60px;
+  bottom: 40px;
+  right: 40px;
   cursor: pointer;
 }
 
